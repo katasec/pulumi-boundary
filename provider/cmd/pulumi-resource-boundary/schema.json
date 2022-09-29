@@ -1,0 +1,157 @@
+{
+    "name": "boundary",
+    "description": "A Pulumi package for creating and managing boundary cloud resources.",
+    "keywords": [
+        "pulumi",
+        "boundary",
+        "category/cloud"
+    ],
+    "homepage": "https://www.pulumi.com",
+    "license": "Apache-2.0",
+    "attribution": "This Pulumi package is based on the [`boundary` Terraform Provider](https://github.com/terraform-providers/terraform-provider-boundary).",
+    "repository": "https://github.com/katasec/pulumi-boundary",
+    "publisher": "Pulumi",
+    "meta": {
+        "moduleFormat": "(.*)(?:/[^/]*)"
+    },
+    "language": {
+        "csharp": {
+            "compatibility": "tfbridge20",
+            "namespaces": null,
+            "packageReferences": {
+                "Pulumi": "3.*"
+            }
+        },
+        "go": {
+            "generateExtraInputTypes": true,
+            "generateResourceContainerTypes": true,
+            "importBasePath": "github.com/pulumi/pulumi-boundary/sdk/go/boundary"
+        },
+        "nodejs": {
+            "compatibility": "tfbridge20",
+            "dependencies": {
+                "@pulumi/pulumi": "^3.0.0"
+            },
+            "devDependencies": {
+                "@types/mime": "^2.0.0",
+                "@types/node": "^10.0.0"
+            },
+            "disableUnionOutputTypes": true,
+            "packageDescription": "A Pulumi package for creating and managing boundary cloud resources.",
+            "packageName": "",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-boundary)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-boundary` repo](https://github.com/katasec/pulumi-boundary/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-boundary` repo](https://github.com/terraform-providers/terraform-provider-boundary/issues).",
+            "typescriptVersion": ""
+        },
+        "python": {
+            "compatibility": "tfbridge20",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-boundary)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-boundary` repo](https://github.com/katasec/pulumi-boundary/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-boundary` repo](https://github.com/terraform-providers/terraform-provider-boundary/issues).",
+            "requires": {
+                "pulumi": "\u003e=3.0.0,\u003c4.0.0"
+            }
+        }
+    },
+    "config": {
+        "variables": {
+            "addr": {
+                "type": "string",
+                "description": "The base url of the Boundary API, e.g. \"http://127.0.0.1:9200\". If not set, it will be read from the \"BOUNDARY_ADDR\" env\nvar.\n"
+            },
+            "authMethodId": {
+                "type": "string",
+                "description": "The auth method ID e.g. ampw_1234567890\n"
+            },
+            "passwordAuthMethodLoginName": {
+                "type": "string",
+                "description": "The auth method login name for password-style auth methods\n"
+            },
+            "passwordAuthMethodPassword": {
+                "type": "string",
+                "description": "The auth method password for password-style auth methods\n"
+            },
+            "recoveryKmsHcl": {
+                "type": "string",
+                "description": "Can be a heredoc string or a path on disk. If set, the string/file will be parsed as HCL and used with the recovery KMS\nmechanism. While this is set, it will override any other authentication information; the KMS mechanism will always be\nused. See Boundary's KMS docs for examples: https://boundaryproject.io/docs/configuration/kms\n"
+            },
+            "tlsInsecure": {
+                "type": "boolean",
+                "description": "When set to true, does not validate the Boundary API endpoint certificate\n"
+            },
+            "token": {
+                "type": "string",
+                "description": "The Boundary token to use, as a string or path on disk containing just the string. If set, the token read here will be\nused in place of authenticating with the auth method specified in \"auth_method_id\", although the recovery KMS mechanism\nwill still override this. Can also be set with the BOUNDARY_TOKEN environment variable.\n"
+            }
+        },
+        "defaults": [
+            "addr"
+        ]
+    },
+    "provider": {
+        "description": "The provider type for the boundary package. By default, resources use package-wide configuration\nsettings, however an explicit `Provider` instance may be created and passed during resource\nconstruction to achieve fine-grained programmatic control over provider settings. See the\n[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.\n",
+        "properties": {
+            "addr": {
+                "type": "string",
+                "description": "The base url of the Boundary API, e.g. \"http://127.0.0.1:9200\". If not set, it will be read from the \"BOUNDARY_ADDR\" env\nvar.\n"
+            },
+            "authMethodId": {
+                "type": "string",
+                "description": "The auth method ID e.g. ampw_1234567890\n"
+            },
+            "passwordAuthMethodLoginName": {
+                "type": "string",
+                "description": "The auth method login name for password-style auth methods\n"
+            },
+            "passwordAuthMethodPassword": {
+                "type": "string",
+                "description": "The auth method password for password-style auth methods\n"
+            },
+            "recoveryKmsHcl": {
+                "type": "string",
+                "description": "Can be a heredoc string or a path on disk. If set, the string/file will be parsed as HCL and used with the recovery KMS\nmechanism. While this is set, it will override any other authentication information; the KMS mechanism will always be\nused. See Boundary's KMS docs for examples: https://boundaryproject.io/docs/configuration/kms\n"
+            },
+            "tlsInsecure": {
+                "type": "boolean",
+                "description": "When set to true, does not validate the Boundary API endpoint certificate\n"
+            },
+            "token": {
+                "type": "string",
+                "description": "The Boundary token to use, as a string or path on disk containing just the string. If set, the token read here will be\nused in place of authenticating with the auth method specified in \"auth_method_id\", although the recovery KMS mechanism\nwill still override this. Can also be set with the BOUNDARY_TOKEN environment variable.\n"
+            }
+        },
+        "required": [
+            "addr"
+        ],
+        "inputProperties": {
+            "addr": {
+                "type": "string",
+                "description": "The base url of the Boundary API, e.g. \"http://127.0.0.1:9200\". If not set, it will be read from the \"BOUNDARY_ADDR\" env\nvar.\n"
+            },
+            "authMethodId": {
+                "type": "string",
+                "description": "The auth method ID e.g. ampw_1234567890\n"
+            },
+            "passwordAuthMethodLoginName": {
+                "type": "string",
+                "description": "The auth method login name for password-style auth methods\n"
+            },
+            "passwordAuthMethodPassword": {
+                "type": "string",
+                "description": "The auth method password for password-style auth methods\n"
+            },
+            "recoveryKmsHcl": {
+                "type": "string",
+                "description": "Can be a heredoc string or a path on disk. If set, the string/file will be parsed as HCL and used with the recovery KMS\nmechanism. While this is set, it will override any other authentication information; the KMS mechanism will always be\nused. See Boundary's KMS docs for examples: https://boundaryproject.io/docs/configuration/kms\n"
+            },
+            "tlsInsecure": {
+                "type": "boolean",
+                "description": "When set to true, does not validate the Boundary API endpoint certificate\n"
+            },
+            "token": {
+                "type": "string",
+                "description": "The Boundary token to use, as a string or path on disk containing just the string. If set, the token read here will be\nused in place of authenticating with the auth method specified in \"auth_method_id\", although the recovery KMS mechanism\nwill still override this. Can also be set with the BOUNDARY_TOKEN environment variable.\n"
+            }
+        },
+        "requiredInputs": [
+            "addr"
+        ]
+    }
+}

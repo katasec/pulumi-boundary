@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"path/filepath"
 
-	boundary "github.com/hashicorp/terraform-provider-boundary/internal/provider"
 	"github.com/katasec/pulumi-boundary/provider/pkg/version"
+	boundary "github.com/katasec/terraform-provider-boundary/shim"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
