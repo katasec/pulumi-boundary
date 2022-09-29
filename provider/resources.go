@@ -54,22 +54,22 @@ func Provider() tfbridge.ProviderInfo {
 		Name: "boundary",
 		// DisplayName is a way to be able to change the casing of the provider
 		// name when being displayed on the Pulumi registry
-		DisplayName: "",
+		DisplayName: "Hashicorp Boundary",
 		// The default publisher for all packages is Pulumi.
 		// Change this to your personal name (or a company name) that you
 		// would like to be shown in the Pulumi Registry if this package is published
 		// there.
-		Publisher: "Pulumi",
+		Publisher: "Katasec",
 		// LogoURL is optional but useful to help identify your package in the Pulumi Registry
 		// if this package is published there.
 		//
 		// You may host a logo on a domain you control or add an SVG logo for your package
 		// in your repository and use the raw content URL for that file as your logo URL.
-		LogoURL: "",
+		LogoURL: "https://www.datocms-assets.com/2885/1620155080-brandhcboundaryprimaryattributedcolor.svg",
 		// PluginDownloadURL is an optional URL used to download the Provider
 		// for use in Pulumi programs
 		// e.g https://github.com/org/pulumi-provider-name/releases/
-		PluginDownloadURL: "",
+		PluginDownloadURL: "https://github.com/katasec/pulumi-boundary/releases/downloadv${VERSION}",
 		Description:       "A Pulumi package for creating and managing boundary cloud resources.",
 		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
 		// For all available categories, see `Keywords` in
@@ -80,7 +80,7 @@ func Provider() tfbridge.ProviderInfo {
 		Repository: "https://github.com/katasec/pulumi-boundary",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
-		GitHubOrg: "",
+		GitHubOrg: "hashicorp",
 		Config:    map[string]*tfbridge.SchemaInfo{
 			// Add any required configuration here, or remove the example below if
 			// no additional points are required.
@@ -92,7 +92,7 @@ func Provider() tfbridge.ProviderInfo {
 			// },
 		},
 		PreConfigureCallback: preConfigureCallback,
-		Resources:            map[string]*tfbridge.ResourceInfo{
+		Resources: map[string]*tfbridge.ResourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi type. Two examples
 			// are below - the single line form is the common case. The multi-line form is
 			// needed only if you wish to override types or other default options.
@@ -105,6 +105,81 @@ func Provider() tfbridge.ProviderInfo {
 			// 		"tags": {Type: tfbridge.MakeType(mainPkg, "Tags")},
 			// 	},
 			// },
+			"boundary_account": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryAccount"),
+			},
+			"boundary_account_oidc": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryAccountOidc"),
+			},
+			"boundary_account_password": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryAccountPassword"),
+			},
+			"boundary_auth_method": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryAuthMethod"),
+			},
+			"boundary_auth_method_oidc": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryAuthMethodOidc"),
+			},
+			"boundary_auth_method_password": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryAuthMethodPassword"),
+			},
+			"boundary_credential_library_vault": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryCredentialLibraryVault"),
+			},
+			"boundary_credential_ssh_private_key": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryCredentialSshPrivateKey"),
+			},
+			"boundary_credential_store_static": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryCredentialStoreStatic"),
+			},
+			"boundary_credential_store_vault": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryCredentialStoreVault"),
+			},
+			"boundary_credential_username_password": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryCredentialUserName"),
+			},
+			"boundary_group": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryGroup"),
+			},
+			"boundary_host": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryHost"),
+			},
+			"boundary_host_catalog": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryHostCatalog"),
+			},
+			"boundary_host_catalog_plugin": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryHostCatalogPlugin"),
+			},
+			"boundary_host_catalog_static": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryHostCatalogStatic"),
+			},
+			"boundary_host_set": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryHostSet"),
+			},
+			"boundary_host_set_plugin": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryHostSetPlugin"),
+			},
+			"boundary_host_set_static": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryHostSetStatic"),
+			},
+			"boundary_host_static": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryHostStatic"),
+			},
+			"boundary_managed_group": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryManagedGroup"),
+			},
+			"boundary_role": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryRole"),
+			},
+			"boundary_scope": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryScope"),
+			},
+			"boundary_target": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryTarget"),
+			},
+			"boundary_user": {
+				Tok: tfbridge.MakeResource(mainPkg, mainMod, "BoundaryUser"),
+			},
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi function. An example
