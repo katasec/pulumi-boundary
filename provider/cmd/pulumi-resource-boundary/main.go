@@ -19,8 +19,8 @@ package main
 import (
 	_ "embed"
 
-	boundary "github.com/katasec/pulumi-boundary/provider"
-	"github.com/katasec/pulumi-boundary/provider/pkg/version"
+	boundary "github.com/katasec/pulumi-boundary/provider/v1"
+	"github.com/katasec/pulumi-boundary/provider/v1/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 )
 

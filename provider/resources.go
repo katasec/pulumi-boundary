@@ -18,7 +18,6 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/katasec/pulumi-boundary/provider/pkg/version"
 	boundary "github.com/katasec/terraform-provider-boundary/shim"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
@@ -211,7 +210,8 @@ func Provider() tfbridge.ProviderInfo {
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: filepath.Join(
 				fmt.Sprintf("github.com/katasec/pulumi-%[1]s/sdk/", mainPkg),
-				tfbridge.GetModuleMajorVersion(version.Version),
+				// "tfbridge.GetModuleMajorVersion(version.Version)",
+				"v1",
 				"go",
 				mainPkg,
 			),

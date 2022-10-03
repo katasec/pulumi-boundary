@@ -1,11 +1,15 @@
-module github.com/katasec/pulumi-boundary/provider
+module github.com/katasec/pulumi-boundary/provider/v1
 
 go 1.18
 
-replace github.com/hashicorp/terraform-plugin-sdk/v2 => github.com/pulumi/terraform-plugin-sdk/v2 v2.0.0-20220824175045-450992f2f5b9
+replace (
+	github.com/hashicorp/terraform-plugin-sdk/v2 => github.com/pulumi/terraform-plugin-sdk/v2 v2.0.0-20220824175045-450992f2f5b9
+	github.com/katasec/terraform-provider-boundary/shim => ./shim
+)
 
 require (
-	github.com/katasec/terraform-provider-boundary v0.0.0-20220929093342-3f1fe1f20121
+	github.com/katasec/pulumi-boundary/provider v0.0.0-20221003055336-2d5e204ca091
+	github.com/katasec/terraform-provider-boundary/shim v0.0.0
 	github.com/pulumi/pulumi-terraform-bridge/v3 v3.28.1
 	github.com/pulumi/pulumi/sdk/v3 v3.38.0
 )
@@ -123,7 +127,6 @@ require (
 	github.com/hashicorp/terraform-plugin-go v0.14.0 // indirect
 	github.com/hashicorp/terraform-plugin-log v0.7.0 // indirect
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.23.0 // indirect
-	github.com/hashicorp/terraform-provider-boundary v1.0.12 // indirect
 	github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734 // indirect
 	github.com/hashicorp/vault/api v1.3.1 // indirect
 	github.com/hashicorp/vault/sdk v0.3.0 // indirect
@@ -137,6 +140,7 @@ require (
 	github.com/jefferai/isbadcipher v0.0.0-20190226160619-51d2077c035f // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/katasec/terraform-provider-boundary v0.0.0-20221003082212-27f329b04eaa // indirect
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
 	github.com/kevinburke/ssh_config v1.1.0 // indirect
 	github.com/klauspost/compress v1.13.5 // indirect

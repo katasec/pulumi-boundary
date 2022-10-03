@@ -648,8 +648,6 @@ github.com/hashicorp/terraform-plugin-log v0.7.0/go.mod h1:p4R1jWBXRTvL4odmEkFfD
 github.com/hashicorp/terraform-plugin-sdk v1.7.0 h1:B//oq0ZORG+EkVrIJy0uPGSonvmXqxSzXe8+GhknoW0=
 github.com/hashicorp/terraform-plugin-sdk v1.7.0/go.mod h1:OjgQmey5VxnPej/buEhe+YqKm0KNvV3QqU4hkqHqPCY=
 github.com/hashicorp/terraform-plugin-test v1.2.0/go.mod h1:QIJHYz8j+xJtdtLrFTlzQVC0ocr3rf/OjIpgZLK56Hs=
-github.com/hashicorp/terraform-provider-boundary v1.0.12 h1:fGPzmnna6Baeoi0l0wqKkt3NHx5V2EUwAsKSZWxxt5E=
-github.com/hashicorp/terraform-provider-boundary v1.0.12/go.mod h1:kur4UpZePlzFa57FZTFwhILLV74pCP6RMKWnx2wScuw=
 github.com/hashicorp/terraform-registry-address v0.0.0-20220623143253-7d51757b572c h1:D8aRO6+mTqHfLsK/BC3j5OAoogv1WLRWzY1AaTo3rBg=
 github.com/hashicorp/terraform-registry-address v0.0.0-20220623143253-7d51757b572c/go.mod h1:Wn3Na71knbXc1G8Lh+yu/dQWWJeFQEpDeJMtWMtlmNI=
 github.com/hashicorp/terraform-svchost v0.0.0-20191011084731-65d371908596/go.mod h1:kNDNcF7sN4DocDLBkQYz73HGKwN1ANB1blq4lIYLYvg=
@@ -723,8 +721,10 @@ github.com/json-iterator/go v1.1.12/go.mod h1:e30LSqwooZae/UwlEbR2852Gd8hjQvJoHm
 github.com/jstemmer/go-junit-report v0.0.0-20190106144839-af01ea7f8024/go.mod h1:6v2b51hI/fHJwM22ozAgKL4VKDeJcHhJFhtBdhmNjmU=
 github.com/jstemmer/go-junit-report v0.9.1/go.mod h1:Brl9GWCQeLvo8nXZwPNNblvFj/XSXhF0NWZEnDohbsk=
 github.com/julienschmidt/httprouter v1.2.0/go.mod h1:SYymIcj16QtmaHHD7aYtjjsJG7VTCxuUUipMqKk8s4w=
-github.com/katasec/terraform-provider-boundary v0.0.0-20220929093342-3f1fe1f20121 h1:f/JZqFDKsJtLKQ/sue3/QLyApp7A7CJ0LkJTXGD/bXc=
-github.com/katasec/terraform-provider-boundary v0.0.0-20220929093342-3f1fe1f20121/go.mod h1:FMi5Teia/h9A9eEedxhI20s2bIGYAevTLcjEbHK9dAc=
+github.com/katasec/pulumi-boundary/provider v0.0.0-20221003055336-2d5e204ca091 h1:siVyzUCNT+6O9rVDS5kvg8IgFt5oLMMH6qtTA9+HnsM=
+github.com/katasec/pulumi-boundary/provider v0.0.0-20221003055336-2d5e204ca091/go.mod h1:FBysMD5aW6l10xHBttbVqCJxoTVCm+7mU2Sx3+nCcuE=
+github.com/katasec/terraform-provider-boundary v0.0.0-20221003082212-27f329b04eaa h1:fV6tx5uQG2GdawTlJ5PkNt84PNA6ymdM3KYclACDtv4=
+github.com/katasec/terraform-provider-boundary v0.0.0-20221003082212-27f329b04eaa/go.mod h1:43hTjLbmwZrOBnPU6PXaHvUGEctk6EhWab6a7b7iiys=
 github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 h1:Z9n2FFNUXsshfwJMBgNA0RU6/i7WVaAegv3PtuIHPMs=
 github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51/go.mod h1:CzGEWj7cYgsdH8dAjBGEr58BoE7ScuLd+fwFZ44+/x8=
 github.com/kevinburke/ssh_config v0.0.0-20201106050909-4977a11b4351/go.mod h1:CT57kijsi8u/K/BOFA39wgDQJ9CxiF4nAY/ojJ6r6mM=
