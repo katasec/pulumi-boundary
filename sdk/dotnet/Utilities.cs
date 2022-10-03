@@ -53,7 +53,7 @@ namespace Katasec.Boundary
         {
             var dst = src ?? new global::Pulumi.InvokeOptions{};
             dst.Version = src?.Version ?? Version;
-            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "https://github.com/katasec/pulumi-boundary/releases/downloadv${VERSION}";
+            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "https://github.com/katasec/pulumi-boundary/releases/download/v${VERSION}";
             return dst;
         }
 

@@ -12,7 +12,7 @@
     "attribution": "This Pulumi package is based on the [`boundary` Terraform Provider](https://github.com/hashicorp/terraform-provider-boundary).",
     "repository": "https://github.com/katasec/pulumi-boundary",
     "logoUrl": "https://www.datocms-assets.com/2885/1620155080-brandhcboundaryprimaryattributedcolor.svg",
-    "pluginDownloadURL": "https://github.com/katasec/pulumi-boundary/releases/downloadv${VERSION}",
+    "pluginDownloadURL": "https://github.com/katasec/pulumi-boundary/releases/download/v${VERSION}",
     "publisher": "Katasec",
     "meta": {
         "moduleFormat": "(.*)(?:/[^/]*)"

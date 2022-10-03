@@ -50,5 +50,5 @@ export function getVersion(): string {
 
 /** @internal */
 export function resourceOptsDefaults(): any {
-    return { version: getVersion(), pluginDownloadURL: "https://github.com/katasec/pulumi-boundary/releases/downloadv${VERSION}" };
+    return { version: getVersion(), pluginDownloadURL: "https://github.com/katasec/pulumi-boundary/releases/download/v${VERSION}" };
 }
